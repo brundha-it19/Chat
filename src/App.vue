@@ -6,6 +6,7 @@
     <!-- <Group_chat_list/> -->
     <!-- <header_component/> -->
     <!-- <Group_list/> -->
+    <!--- group-->
   </div>
 </template>
 
