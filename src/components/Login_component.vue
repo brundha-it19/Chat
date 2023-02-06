@@ -2,6 +2,10 @@
     <div>
         <div class="Login_Container">   
             <!-- <img  class="Image" src="https://cdn.dribbble.com/users/6147920/screenshots/14325672/media/82dc88c61fe3d073711706256023e7c6.jpg" width="200px" height="140px">  -->
+            &nbsp;
+            <div  class="error" v-if="errors.length">
+             <div v-for="(error,index) in errors" :key="index"> {{ error }}</div>
+            </div>
             <i class="fa fa-user" aria-hidden="true" style="font-size:70px;color:black;margin-top:30px;" ></i>
             <form>
             <br>
@@ -9,7 +13,7 @@
             <!-- <label id="Label1" ><b>USERNAME </b></label><br> -->
             <!-- <input  type="text" id="input" v-model="User.user_name"/><br> -->
             <label id="Label2"  ><b>PHONE NUMBER </b></label><br>
-            <input  type="text" id="input" v-model="User.phone_number"/><br>
+            <input  type="text" id="input" v-model="User.mobileNum"/><br>
             <label id="Label3"  ><b>PASSWORD</b> </label><br>
             <input  type="password" id="input" v-model="User.password"/><br><br>
             <button @click="Login_Authenticate()" id="b1" type="button" >Login</button>
@@ -37,6 +41,19 @@
       /* box-shadow: 30px; */
       box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
       
+  }
+  .error{
+    width:200px;
+    height:80px;
+    /* background-color:pink; */
+    color:black;
+    margin-top:20px;
+    font-family: cursive;
+    border-radius:5px;
+    margin-left:150px;
+    text-align: center;
+    /* margin-top:50px; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
   #Login_Text
   {

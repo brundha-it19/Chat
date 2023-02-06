@@ -50,7 +50,7 @@ export default
          async CreateGroup()
         {
             document.getElementById("Form").style.display = "block";
-            await axios.get("http://10.30.1.7:8082/displayContacts").then((response)=>
+            await axios.get("http://10.30.1.3:8082/displayContacts").then((response)=>
             {
                 this.getContact(response.data)      
                 console.log(this.RetrieveContact,"jhje")

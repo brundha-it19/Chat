@@ -7,6 +7,8 @@
     <!-- <header_component/> -->
     <!-- <Group_list/> -->
     <!--- group-->
+    <!-- <file_upload/> -->
+    <!-- <BaseImageInput/> -->
   </div>
 </template>
 
@@ -15,6 +17,8 @@
 // import HelloWorld from './components/HelloWorld.vue'
 // import header_component from './components/js/header_component';
 // import Group_chat_list from './components/Group_chat_list.vue'
+// import file_upload from './components/file_upload.vue';
+// import  BaseImageInput from './components/BaseImageInput.vue'
 export default {
   name: 'App',
   components: {
@@ -22,6 +26,8 @@ export default {
     // Group_list
     // header_component
     // Group_chat_list
+    // file_upload
+    // BaseImageInput
   }
 }
 </script>

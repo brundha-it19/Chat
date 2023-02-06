@@ -5,17 +5,52 @@
                <!-- <h1 id="whatsapp">WhatsApp</h1> -->
                <!-- <div class="user1"><img src="https://png.pngtree.com/png-vector/20190330/ourlarge/pngtree-vector-leader-of-group-icon-png-image_894885.jpg"></div> -->
                 <div class="user1"><img src="https://png.pngtree.com/png-vector/20190330/ourlarge/pngtree-vector-leader-of-group-icon-png-image_894885.jpg" width="50px" height="50px"/></div>
-               <div class="group_name" style="font-family:cursive;color:black;font-size:20px;margin-top:20px;">{{ RetrieveChat.groupname }}</div>
-                <i @click="ShowGroupMember" id="group1" class="fa fa-users" aria-hidden="true"></i>
-                <i id="dotline1" class="fa fa-ellipsis-v" aria-hidden="true"></i>
+               <div class="group_name" style="font-family:cursive;color:black;font-size:20px;margin-top:20px;">{{ RetrieveChat.groupName }}</div>
+                <i @click="ShowGroupMember()" id="group1" class="fa fa-users" aria-hidden="true"></i>
+                <i id="dotline1" class="fa fa-ellipsis-v" aria-hidden="true" @click="addmember()"></i>
             </div>
         </div>
         <div class="popup1" id="Form1">            
             <div class="member">
-                  <h5  v-for="(i,index) in RetrieveMember" :key="index">{{ i.userid }}</h5>
+                  <h5  v-for="(i,index) in RetrieveMember" :key="index">{{ i.userid }}   <i class="fa fa-times" aria-hidden="true"  @click="removemember()"></i></h5>
                   <button type="button" class="cancel" @click="Cancel()">Close</button>
             </div>
         </div>
+        <div class="popup1" id="Form2">            
+            <div class="member">
+                 <p> add member </p>
+                 <select  placeholder="Contacts" name="contact" v-model="grp_detail.contact"  required>
+                    <option  v-for="(i,index) in RetrieveContact" :key="index" >
+                        <input v-for="(i,index) in RetrieveContact" :key="index" type="checkbox" value="jhdjhde"/>
+                        {{i.mobilenum}} 
+                    </option>
+                    </select>  <br/><br/>
+                    <button @click="addmember1()"> Add </button><br/><br/>
+                 <button type="button" class="cancel" @click="Cancel2()">Close</button>
+            </div>
+        </div>
+        <div class="popup1" id="addmem">            
+            <div class="member">
+                    {{ Retrieve_AddMember }}<br/>
+                    <button type="button" class="cancel" @click="Cancel3()">Close</button>
+                </div>
+                </div>
+        <div class="popup1" id="remove">            
+            <div class="member">
+                  <p> Member removed..! </p>
+                  <button type="button" class="cancel" @click="Cancel1()">Close</button>
+            </div>
+        </div>
+    <!-- <div class="popup1" id="Form2">
+        <div class="member">
+        <p>sdfghj</p>
+        <select  placeholder="Contacts" name="contact" v-model="grp_detail.contact"  required>
+                    <option  v-for="(i,index) in RetrieveContact" :key="index" >
+                        <input v-for="(i,index) in RetrieveContact" :key="index" type="checkbox" value="jhdjhde"/>{{i.mobilenum}}
+                    </option>
+                    </select>
+    </div> 
+    </div> -->
 
     </div>
 </template>
@@ -52,14 +87,27 @@
     border: 2px solid white;
     /* top: 5px; */
 }
+
+.removed{
+    width:100px;
+    height:40px;
+    border-radius:5px;
+    background-color: white;
+    top: -270px;
+    right: -450px;
+    margin-right:100px;
+}
 .member
 {
+    margin-top:200px;
     max-width: 300px;
   padding: 10px;
   background-color: white;
   position:relative;
-  top: -270px;
+  /* top: -270px; */
+  /* top:5px; */
   right: -450px;
+  border-radius:5px;
   
 }
 #group1

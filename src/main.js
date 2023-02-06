@@ -17,6 +17,10 @@ import Search from './components/store/Search'
 import ContactStore from './components/store/ContactStore'
 import Login_component from '/Users/brundha/Documents/vue/chat/project1/src/components/Login_component.vue'
 import Group_chat_list from '/Users/brundha/Documents/vue/chat/project1/src/components/Group_chat_list.vue'
+import imageId from './components/store/imageId'
+import image_store from './components/store/image_store'
+import remove_Member from './components/store/remove_Member'
+import addmember from './components/store/addmember'
 Vue.config.productionTip = false
 Vue.use(Vuex)
 Vue.use(VueRouter)
@@ -29,7 +33,7 @@ Vue.component('font-awesome-icon',FontAwesomeIcon)
 const store= new Vuex.Store({
   modules:
   {
-    User_Store,Chat_List,ChatStore,Message,GroupStore,GroupMember,Search,ContactStore
+    User_Store,Chat_List,ChatStore,Message,GroupStore,GroupMember,Search,ContactStore,imageId,image_store,remove_Member,addmember
   }
 })
 

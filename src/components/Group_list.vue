@@ -5,7 +5,7 @@
         </div>
             <div>     
         <div id="section1">     
-        <div style="width:max-content;font-family:cursive;color:black"><h4 class="name">   &nbsp; &nbsp;&nbsp;&nbsp; {{ data.groupname }}</h4> </div>
+        <div style="width:max-content;font-family:cursive;color:black"><h4 class="name">   &nbsp; &nbsp;&nbsp;&nbsp; {{ data.groupName }}</h4> </div>
           <!-- <span><i id="tick" class="fa fa-check" aria-hidden="true"></i></span> -->
           <!-- <div style="width:max-content;position: relative;top:43px;color:gray"><h4 class="message">{{data.messagetext}}</h4></div> -->
         </div>

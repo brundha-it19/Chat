@@ -52,7 +52,7 @@
 {
     height: fit-content;
     font-size: medium;
-    background:pink;
+    background-color:pink;
     z-index: 2;
     /* border:2px solid black; */
     
@@ -112,7 +112,7 @@
    position: relative;
    width: 100%;
    height: 50px;
-   background:pink;
+   background-color:#17a2b8;
    display: flex;
    justify-content: space-between;
    padding: 0.15px;

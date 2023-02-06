@@ -2,7 +2,7 @@
     <div @getGroupList="getDetails">
         <div class="Container">
             <div class="ChatList">    
-                <div class="header">
+                <div class="header">   
                 <header_component @getFilter="getfiltername()" :data="user" ></header_component></div>
                 <div id="scroll">            
                     <Group_list  v-for="(x,index) in Group" :key="index" :data="x"></Group_list>
@@ -17,15 +17,23 @@
                                <!-- <h>{{RetrieveUserDetails.mobilenum}}</h> -->      
                                 <div id="lazy" :class="(i.senderid==RetrieveUserDetails.mobilenum)?'Right':'Left'"> <h6 :class="(i.senderid==RetrieveUserDetails.mobilenum)?'number1':'number2'">{{i.senderid}}</h6><h6>{{i.messagetext}}</h6></div>
                         </div>
-                    <div id="img"> 
-                        
-                    </div>
-                    </div>  
+                        <div id="image_upload" v-if='isclicked' :class="(RetrieveMessage.senderid==RetrieveUserDetails.mobilenum)?'Left':'Right'">
+                           <!-- <p color:white> image sent</p> -->
+                           <!-- <p> {{ RetrieveImage?.data }}</p>     -->
+                           <!-- <a href="RetrieveImage?.data">hj</a> -->
+                           <!-- <img :src="RetrieveImage?.data" width="100px" height="80px" /> -->
+                           <!-- <div  v-for="(i,index) in RetrieveImage" :key="index"> -->
+                           <img src="RetrieveImage.data"/>  
+                           <!-- <img :src="RetrieveImage.data" /> -->
+                        </div>      
+                        </div>
                 </div>
 
                 <footer class="message" >
-                  <input type="file" @change="handleFilesUpload()" ref="file" id="files">
-                     <button style="margin-right:850px;" @click="submitFiles()">Upload</button>
+                  <input type="file" @change="handleFilesUpload()"  ref="file" id="files" multiple="multiple" >
+                  
+                     <button style="margin-right:850px;"  @click="submitFiles()">Upload</button>
+                    
                   <!-- <input type="file" ref="file" round class="change-profile-image" @change="handleFilesUpload()" id="file" /> -->
                     <!-- <div style="left:-455px;position: relative;top:90px;">
                          <button style="position: relative;top:-100px;height:25px;width: 15px;" @click="addFiles()"> 
@@ -113,6 +121,12 @@
     height:88vh;
     overflow:auto;
     margin-top: 3px;
+  }
+  #image_upload{
+   /* margin-left:600px; */
+   margin-top:100px;
+   width:50px;
+   height:60px;
   }
     #files{
       color:black;
@@ -288,16 +302,16 @@
     background-position: center;
     overflow: hidden;
     background-color:black;
-    height:640px;
+    height:max-content;
  }
  .ChatList
  {
     border: 5px solid black;
-    height: 700px;
+    /* height: 1000px; */
     overflow: hidden;
     background: #fff;
     border-radius: 5px;
-    
+    height:700px;
     
     
     
