@@ -18,7 +18,7 @@
         </div>
         <div class="popup1" id="Form2">            
             <div class="member">
-                 <p> add member </p>
+                 <p style="font-family:cursive"> Add member </p>
                  <select  placeholder="Contacts" name="contact" v-model="grp_detail.contact"  required>
                     <option  v-for="(i,index) in RetrieveContact" :key="index" >
                         <input v-for="(i,index) in RetrieveContact" :key="index" type="checkbox" value="jhdjhde"/>
@@ -99,12 +99,12 @@
 }
 .member
 {
-    margin-top:200px;
+    /* margin-top:200px; */
     max-width: 300px;
   padding: 10px;
   background-color: white;
   position:relative;
-  /* top: -270px; */
+  top: -150px;
   /* top:5px; */
   right: -450px;
   border-radius:5px;

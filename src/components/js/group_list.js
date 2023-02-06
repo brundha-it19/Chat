@@ -62,13 +62,13 @@ export default
                     // var id=parseInt(Object.keys(this.RetrieveGroup))
 
                     // console.log(id)
-                    console.log(this.RetrieveGroup)
+                    console.log(this.RetrieveGroup)     
                     console.log(this.RetrieveChat)                            
                     // console.log(parseInt(Object.keys(this.RetrieveChat)))   
-                    console.log(this.RetrieveUserDetails.mobilenum)  
+                    console.log(this.RetrieveUserDetails.mobilenum)     
                     axios.get(`two/displaySpecific?groupid=${parseInt(this.RetrieveChat.id)}&userid=${this.RetrieveUserDetails.mobilenum}`).then((response) => {
                 // axios.get(`two/displaySpecific?groupid=${parseInt(this.RetrieveChat.id)}&userid=${this.RetrieveUserDetails.mobilenum}`).then((response) => {
-                    console.log(response.data);  
+                    console.log(response.data);                                                                                                  
                     this.getMessage(response.data);
                     window.localStorage.setItem('messsage', JSON.stringify(response.data))
                     // console.log(this.RetrieveMessage)    

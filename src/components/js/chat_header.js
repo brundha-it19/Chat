@@ -69,7 +69,7 @@ export default
             this.remove_Member(this.data)               
             console.log(this.RetrieveChat.groupName)
             console.log(this.RetrieveMember[0].userid)
-                axios.delete(`two/removeMember?groupid=${parseInt(this.RetrieveChat.id)}&userid=${this.RetrieveMember[2].userid}`).then((res) =>
+                axios.delete(`two/removeMember?groupid=${parseInt(this.RetrieveChat.id)}&userid=${this.RetrieveMember.userid}`).then((res) =>
                 {                                           
                         console.log(res)                    
                 })

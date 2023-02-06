@@ -12,12 +12,12 @@
             <div class="ChatSection" id="ChatSec">   
                 <div><chat_header :detail="data_value"></chat_header></div>
                 <div class="SubSection" id="SubSec">        
-                    <div id="scroll"> 
-                            <div class="messg" v-for="(i,index) in RetrieveMessage" :key="index" >
+                    <div id="scroll">                                                     
+                           <div class="messg" v-for="(i,index) in RetrieveMessage" :key="index" >
                                <!-- <h>{{RetrieveUserDetails.mobilenum}}</h> -->      
                                 <div id="lazy" :class="(i.senderid==RetrieveUserDetails.mobilenum)?'Right':'Left'"> <h6 :class="(i.senderid==RetrieveUserDetails.mobilenum)?'number1':'number2'">{{i.senderid}}</h6><h6>{{i.messagetext}}</h6></div>
-                        </div>
-                        <div id="image_upload" v-if='isclicked' :class="(RetrieveMessage.senderid==RetrieveUserDetails.mobilenum)?'Left':'Right'">
+                           </div>
+                    <div id="image_upload" v-if='isclicked' :class="(RetrieveMessage.senderid==RetrieveUserDetails.mobilenum)?'Left':'Right'">
                            <!-- <p color:white> image sent</p> -->
                            <!-- <p> {{ RetrieveImage?.data }}</p>     -->
                            <!-- <a href="RetrieveImage?.data">hj</a> -->
@@ -29,11 +29,11 @@
                         </div>
                 </div>
 
-                <footer class="message" >
+                <footer class="message">
                   <input type="file" @change="handleFilesUpload()"  ref="file" id="files" multiple="multiple" >
                   
                      <button style="margin-right:850px;"  @click="submitFiles()">Upload</button>
-                    
+                  
                   <!-- <input type="file" ref="file" round class="change-profile-image" @change="handleFilesUpload()" id="file" /> -->
                     <!-- <div style="left:-455px;position: relative;top:90px;">
                          <button style="position: relative;top:-100px;height:25px;width: 15px;" @click="addFiles()"> 

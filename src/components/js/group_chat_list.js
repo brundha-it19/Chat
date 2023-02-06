@@ -90,8 +90,8 @@ export default
             async sendMessage() {
                 // console.log(this.RetrieveUserDetails)
                 document.getElementById('msg').value = '';
-                console.log(this.RetrieveChat)
-                console.log(this.RetrieveUserDetails)
+                console.log(this.RetrieveChat)      
+                console.log(this.RetrieveUserDetails)                               
                 console.log(this.RetrieveUserDetails.mobilenum)
                 var object = { groupId: this.RetrieveChat.id,senderId: this.RetrieveUserDetails.mobilenum, messageText: this.message }
                 console.log(object)      
@@ -99,11 +99,11 @@ export default
                     document.getElementById('msg').value = '';
                     console.log(response);      
                     console.log(this.RetrieveChat.id) 
-                axios.get(`two/displaySpecific?groupid=${parseInt(this.RetrieveChat.id)}&userid=${this.RetrieveUserDetails.mobileNum}`).then((response) => {
-                    document.getElementById('msg').value = '';      
-                    console.log(response)   
-                    this.getMessage(response)    
-                        })      
+                // axios.get(`two/displaySpecific?groupid=${parseInt(this.RetrieveChat.id)}&userid=${this.RetrieveUserDetails.mobileNum}`).then((response) => {
+                //     document.getElementById('msg').value = '';      
+                //     console.log(response)   
+                //     this.getMessage(response)    
+                //         })      
                 })   
             },
             // previewMultiImage: function(event) 
@@ -167,7 +167,7 @@ export default
                     // this.image_id(resp)
                 })             
                 await axios.get(`two/download/${this.RetrieveImageId}`).then((res) => {        
-                    console.log(res)
+                    console.log(res)                
                     console.log(res.data)                  
                     this.getImage(res)                          
                 })       

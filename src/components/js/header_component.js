@@ -40,12 +40,14 @@ export default
         ...mapGetters('User_Store',['RetrieveUserDetails']),
          ...mapGetters('Search',['RetrieveSearch']),
          ...mapGetters('ContactStore',['RetrieveContact'])
+         
 
     },
     methods:
     {
         ...mapActions('Search',['getSearch']),
         ...mapActions('ContactStore',['getContact']),
+        ...mapActions('GroupStore',['getGroup']),
 
          async CreateGroup()
         {
@@ -74,7 +76,12 @@ export default
             console.log(this.RetrieveUserDetails.mobilenum)
             console.log(this.grp_detail.contact)             
             var res = axios.post(`two/createGroup?groupname=${this.grp_detail.name}&createdby=${this.RetrieveUserDetails.mobilenum}&userid=${this.grp_detail.contact}`)
-            console.log(res)        
+            console.log(res)  
+            console.log(this.RetrieveUserDetails.mobilenum)
+            // const response=  axios.get(`two/showGroup?mobilenum=${this.RetrieveUserDetails.mobilenum}`);
+            // console.log(response.data)       
+            // this.getGroup(response.data)    
+            // console.log(this.RetrieveGroup)  
         }
     },
     watch:
