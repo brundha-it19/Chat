@@ -9,7 +9,7 @@
             <i class="fa fa-user" aria-hidden="true" style="font-size:70px;color:black;margin-top:30px;" ></i>
             <form>
             <br>
-            <label id="Login_Text" style="font-family: cursive;"><b>login page</b></label><br>
+            <label id="Login_Text" style="font-family: cursive;"><b>User login</b></label><br>
             <!-- <label id="Label1" ><b>USERNAME </b></label><br> -->
             <!-- <input  type="text" id="input" v-model="User.user_name"/><br> -->
             <label id="Label2"  ><b>PHONE NUMBER </b></label><br>
