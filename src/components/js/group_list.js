@@ -64,9 +64,12 @@ export default
                     // console.log(id)
                     console.log(this.RetrieveGroup)     
                     console.log(this.RetrieveChat)                            
-                    // console.log(parseInt(Object.keys(this.RetrieveChat)))   
-                    console.log(this.RetrieveUserDetails.mobilenum)     
-                    axios.get(`two/displaySpecific?groupid=${parseInt(this.RetrieveChat.id)}&userid=${this.RetrieveUserDetails.mobilenum}`).then((response) => {
+                    // console.log(parseInt(Object.keys(this.RetrieveChat)))  
+                    console.log(parseInt(this.RetrieveChat.id)) 
+                    console.log(this.RetrieveUserDetails)
+                    console.log(this.RetrieveUserDetails.data)   
+                    console.log(this.RetrieveUserDetails.data.mobilenum)  
+                    axios.get(`two/displaySpecific?groupid=${parseInt(this.RetrieveChat.id)}&userid=${this.RetrieveUserDetails.data.mobilenum}`).then((response) => {
                 // axios.get(`two/displaySpecific?groupid=${parseInt(this.RetrieveChat.id)}&userid=${this.RetrieveUserDetails.mobilenum}`).then((response) => {
                     console.log(response.data);                                                                                                  
                     this.getMessage(response.data);

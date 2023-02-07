@@ -17,8 +17,20 @@
             <label id="Label3"  ><b>PASSWORD</b> </label><br>
             <input  type="password" id="input" v-model="User.password"/><br><br>
             <button @click="Login_Authenticate()" id="b1" type="button" >Login</button>
+            <div class="popup1" id="form" style="display:none">            
+            <div class="member">
+              <!-- <div v-if="RetrieveLogin.loginstatus">
+                  <p> Successful..! </p>
+                </div>
+                <div  v-else> -->
+                   <p> {{ RetrieveLogin.data }}</p>
+              <!-- </div> -->
+                <button type="button" class="cancel" @click="Close()">Close</button>
+              </div>
+              </div>
         </form>
         </div>
+       
     </div>   
     </template>
     
@@ -41,6 +53,19 @@
       /* box-shadow: 30px; */
       box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
       
+  }
+  .member{
+   
+  padding: 10px;
+  background-color:white;
+  position:relative;
+  margin-top:20px;
+  /* top:5px; */
+  left: -450px;
+  border-radius:5px;
+ width:200px;
+ margin-left:600px;
+ box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
   .error{
     width:200px;

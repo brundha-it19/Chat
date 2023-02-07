@@ -3,7 +3,8 @@
         <div class="Container">
             <div class="ChatList">    
                 <div class="header">   
-                <header_component @getFilter="getfiltername()" :data="user" ></header_component></div>
+                <header_component @getFilter="getfiltername()" :data="user" ></header_component>
+               </div>
                 <div id="scroll">            
                     <Group_list  v-for="(x,index) in Group" :key="index" :data="x"></Group_list>
                 <!-- </div> -->
@@ -15,9 +16,9 @@
                     <div id="scroll">                                                     
                            <div class="messg" v-for="(i,index) in RetrieveMessage" :key="index" >
                                <!-- <h>{{RetrieveUserDetails.mobilenum}}</h> -->      
-                                <div id="lazy" :class="(i.senderid==RetrieveUserDetails.mobilenum)?'Right':'Left'"> <h6 :class="(i.senderid==RetrieveUserDetails.mobilenum)?'number1':'number2'">{{i.senderid}}</h6><h6>{{i.messagetext}}</h6></div>
+                                <div id="lazy" :class="(i.senderid==RetrieveUserDetails.data.mobilenum)?'Right':'Left'"> <h6 :class="(i.senderid==RetrieveUserDetails.data.mobilenum)?'number1':'number2'">{{i.senderid}}</h6><h6>{{i.messagetext}}</h6></div>
                            </div>
-                    <div id="image_upload" v-if='isclicked' :class="(RetrieveMessage.senderid==RetrieveUserDetails.mobilenum)?'Left':'Right'">
+                    <div id="image_upload" v-if='isclicked' :class="(RetrieveMessage.senderid==RetrieveUserDetails.data.mobilenum)?'Left':'Right'">
                            <!-- <p color:white> image sent</p> -->
                            <!-- <p> {{ RetrieveImage?.data }}</p>     -->
                            <!-- <a href="RetrieveImage?.data">hj</a> -->
@@ -329,7 +330,7 @@
     /* top:7px; */
     overflow-x: hidden;
     overflow-y: auto;
-    height:88vh;
+    height:550px;
     overflow:auto;
     margin-top: 3px;
     /* transform:rotate(180deg); */

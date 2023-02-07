@@ -84,8 +84,8 @@ export default
         var res = await axios.post(`http://10.30.1.3:8085/addMember?groupid=${parseInt(this.RetrieveChat.id)}&userid=${this.grp_detail.contact}`)
         {
             console.log(res)
-            console.log(res.data)
-            this.add_member(res.data)
+            console.log(res.data)       
+            this.add_member(res.data)                                               
         }
         }   
            

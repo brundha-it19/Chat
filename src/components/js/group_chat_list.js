@@ -93,7 +93,7 @@ export default
                 console.log(this.RetrieveChat)      
                 console.log(this.RetrieveUserDetails)                               
                 console.log(this.RetrieveUserDetails.mobilenum)
-                var object = { groupId: this.RetrieveChat.id,senderId: this.RetrieveUserDetails.mobilenum, messageText: this.message }
+                var object = { groupId: this.RetrieveChat.id,senderId: this.RetrieveUserDetails.data.mobilenum, messageText: this.message }
                 console.log(object)      
                 await axios.post(`two/sendMessage`, object).then((response) => {   
                     document.getElementById('msg').value = '';
@@ -151,7 +151,7 @@ export default
                 const headers = { 'Content-Type': 'multipart/form-data' };
                 console.log(this.RetrieveUserDetails.mobilenum)
                 console.log(this.RetrieveChat.id)
-                axios.post( `two/sendFile?senderid=${this.RetrieveUserDetails.mobilenum}&groupid=${parseInt(this.RetrieveChat.id)}`, formData, { headers }).then((res) => {
+                axios.post( `two/sendFile?senderid=${this.RetrieveUserDetails.data.mobilenum}&groupid=${parseInt(this.RetrieveChat.id)}`, formData, { headers }).then((res) => {
                     // res.data.files; 
                     // res.status;
                     console.log(res)   

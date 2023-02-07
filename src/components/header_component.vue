@@ -1,5 +1,5 @@
 <template>
-    <div class="Header">
+    <div style="border:2px solid black;">
         <div>
             <div style="display: flex;position:relative;">
                <!-- <h1 id="whatsapp">WhatsApp</h1> -->
@@ -12,7 +12,7 @@
                
                <!-- <button id="logout_button" type="button" @click="CreateGroup()"></button> -->
                <i  @click="logout" id="dotline" class="fa fa-sign-out" aria-hidden="true"></i>
-               <span><h4 style="color:white; left:10px;position: relative;width:30%;font-family: cursive;color:black"> Hi&nbsp;{{ data }}</h4></span>
+               <span><h4 style="color:white; left:10px;position: relative;width:30%;font-family: cursive;color:black"> Hi&nbsp;{{ RetrieveUserDetails.data.username }}</h4></span>
             </div>      
             <!-- <div class="Options"> -->
                 <!-- <h4 class="chats">Chats</h4>

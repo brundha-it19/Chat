@@ -21,6 +21,7 @@ import imageId from './components/store/imageId'
 import image_store from './components/store/image_store'
 import remove_Member from './components/store/remove_Member'
 import addmember from './components/store/addmember'
+import Login_store from './components/store/Login_store'
 Vue.config.productionTip = false
 Vue.use(Vuex)
 Vue.use(VueRouter)
@@ -33,7 +34,7 @@ Vue.component('font-awesome-icon',FontAwesomeIcon)
 const store= new Vuex.Store({
   modules:
   {
-    User_Store,Chat_List,ChatStore,Message,GroupStore,GroupMember,Search,ContactStore,imageId,image_store,remove_Member,addmember
+    User_Store,Chat_List,ChatStore,Message,GroupStore,GroupMember,Search,ContactStore,imageId,image_store,remove_Member,addmember,Login_store
   }
 })
 

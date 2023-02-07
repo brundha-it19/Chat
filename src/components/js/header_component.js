@@ -72,12 +72,12 @@ export default
         },
         postgrpdata()
         {
-            console.log(this.grp_detail.name)
-            console.log(this.RetrieveUserDetails.mobilenum)
+            console.log(this.grp_detail.name)                           
+            console.log(this.RetrieveUserDetails.data.mobilenum)
             console.log(this.grp_detail.contact)             
-            var res = axios.post(`two/createGroup?groupname=${this.grp_detail.name}&createdby=${this.RetrieveUserDetails.mobilenum}&userid=${this.grp_detail.contact}`)
+            var res = axios.post(`two/createGroup?groupname=${this.grp_detail.name}&createdby=${this.RetrieveUserDetails.data.mobilenum}&userid=${this.grp_detail.contact}`)
             console.log(res)  
-            console.log(this.RetrieveUserDetails.mobilenum)
+            console.log(this.RetrieveUserDetails.data.mobilenum)
             // const response=  axios.get(`two/showGroup?mobilenum=${this.RetrieveUserDetails.mobilenum}`);
             // console.log(response.data)       
             // this.getGroup(response.data)    
