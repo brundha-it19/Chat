@@ -14,18 +14,18 @@ export default
                 mobileNum:"",
                 password:""
             },
-            User_Details:
-            [
-                {
-                    phone_number:"9998877766",
-                    password:"suthir"
-                },
-                {
-                    phone_number:"9998887776",
-                    password:"brundha"
-                }   
+            // User_Details:
+            // [
+            //     {
+            //         phone_number:"9998877766",
+            //         password:"suthir"
+            //     },
+            //     {
+            //         phone_number:"9998887776",
+            //         password:"brundha"
+            //     }   
 
-            ],
+            // ],
             login:"",
             isMatched:false,
             errors:[]
