@@ -98,13 +98,13 @@ export default
                 await axios.post(`two/sendMessage`, object).then((response) => {   
                     document.getElementById('msg').value = '';
                     console.log(response);      
-                    console.log(this.RetrieveChat.id) 
-                // axios.get(`two/displaySpecific?groupid=${parseInt(this.RetrieveChat.id)}&userid=${this.RetrieveUserDetails.mobileNum}`).then((response) => {
+                    console.log(this.RetrieveChat.id)    
+                })  
+                // axios.get(`two/displaySpecific?groupid=${parseInt(this.RetrieveChat.id)}&userid=${this.RetrieveUserDetails.data.mobilenum}`).then((response) => {
                 //     document.getElementById('msg').value = '';      
                 //     console.log(response)   
                 //     this.getMessage(response)    
-                //         })      
-                })   
+                // })
             },
             // previewMultiImage: function(event) 
             // {

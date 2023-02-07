@@ -6,7 +6,7 @@
                 <header_component @getFilter="getfiltername()" :data="user" ></header_component>
                </div>
                 <div id="scroll">            
-                    <Group_list  v-for="(x,index) in Group" :key="index" :data="x"></Group_list>
+                    <Group_list  v-for="(x,index) in RetrieveGroup" :key="index" :data="x"></Group_list>
                 <!-- </div> -->
                 </div>     
             </div>   

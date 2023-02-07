@@ -75,15 +75,19 @@ export default
             console.log(this.grp_detail.name)                           
             console.log(this.RetrieveUserDetails.data.mobilenum)
             console.log(this.grp_detail.contact)             
-            var res = axios.post(`two/createGroup?groupname=${this.grp_detail.name}&createdby=${this.RetrieveUserDetails.data.mobilenum}&userid=${this.grp_detail.contact}`)
+            axios.post(`two/createGroup?groupname=${this.grp_detail.name}&createdby=${this.RetrieveUserDetails.data.mobilenum}&userid=${this.grp_detail.contact}`).then((res) =>
+            {
             console.log(res)  
             console.log(this.RetrieveUserDetails.data.mobilenum)
-            // const response=  axios.get(`two/showGroup?mobilenum=${this.RetrieveUserDetails.mobilenum}`);
-            // console.log(response.data)       
-            // this.getGroup(response.data)    
-            // console.log(this.RetrieveGroup)  
-        }
-    },
+            axios.get(`two/showGroup?mobilenum=${this.RetrieveUserDetails.data.mobilenum}`).then((response) =>
+            {
+            console.log(response.data)                             
+            this.getGroup(response.data)                       
+            console.log(this.RetrieveGroup)                 
+            })         
+            })       
+    }                               
+    },                          
     watch:
     { 
         searchgroup:function()     
@@ -95,7 +99,7 @@ export default
             // this.getSearch(this.filter_name)   
             // console.log(this.RetrieveSearch)
             this.$emit('getFilter',this.filter_name)        
-        },
+        }
     } 
-}   
-
+  
+    }
